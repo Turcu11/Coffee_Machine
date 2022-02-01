@@ -79,8 +79,8 @@ namespace Exercitii
             {
                 Console.WriteLine("Starting the brewing procees...");
                 Console.WriteLine(".....Please wait.....");
-                Console.WriteLine("Coffee is ready, ENJOY :)");
-                Coffee.PrintCoffeeData(coffeeToOrder);
+                Console.WriteLine($"{coffeeToOrder.coffeeType} is ready, ENJOY :)");
+                //Coffee.PrintCoffeeData(coffeeToOrder);
                 currentCredit = SubtractCredit(currentCredit, coffeeToOrder.price);
             }
             else

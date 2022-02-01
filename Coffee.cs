@@ -9,7 +9,7 @@ namespace Exercitii
     public class Coffee
     {
         int coffeeID { get; set; }
-        string coffeeType { get; set; }
+        public string coffeeType { get; set; }
         public double price { get; set; }
         double quantity { get; set; }
         bool itHasMilk { get; set; }
