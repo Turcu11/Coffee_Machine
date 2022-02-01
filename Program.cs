@@ -26,6 +26,7 @@ namespace Exercitii
                         break;
 
                     case 3:
+                        Console.WriteLine($"Current credit: {credit} ");
                         Console.Write($"Plese enter the ammount you want to add: ");
                         credit = AddCredit(credit, Convert.ToDouble(Console.ReadLine()));
                         break;
@@ -55,7 +56,7 @@ namespace Exercitii
 
         public static double AddCredit(double currentCredit, double sumToAdd)
         {
-            while(sumToAdd <= 0)
+            while (sumToAdd <= 0)
             {
                 Console.WriteLine($"You need to add a pozitive ammount of credit !");
                 Console.Write($"Credit to add: ");
@@ -97,7 +98,13 @@ namespace Exercitii
 
         public static Coffee SelectCoffee()
         {
-            int option = Convert.ToInt32(Console.ReadLine());
+            string imput = Console.ReadLine();
+            while(String.IsNullOrEmpty(imput))
+            {
+                Console.WriteLine($"Please select a valid option !");
+                imput = Console.ReadLine();
+            }
+            int option = Convert.ToInt32(imput);
 
             switch(option)
             {
