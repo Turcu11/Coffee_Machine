@@ -21,6 +21,12 @@ namespace Exercitii
 
                     case 2:
                         Menu();
+                        while(credit <= 0)
+                        {
+                            Console.WriteLine($"You can't buy anytihing you have {credit}");
+                            Console.Write($"The sum you want to add: ");
+                            credit = AddCredit(credit, Convert.ToDouble(Console.ReadLine()));
+                        }
                         OrderCoffee(SelectCoffee(), credit);
                         credit = SubtractCredit(credit, Coffee.GetCoffeePrice(SelectCoffee()));
                         break;
