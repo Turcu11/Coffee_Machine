@@ -38,7 +38,13 @@ namespace Exercitii
                         break;
                 }
                 Console.Write($"Please select your option: ");
-                option = Convert.ToInt32(Console.ReadLine());
+                string inputFromUser = Console.ReadLine();
+                while(String.IsNullOrEmpty(inputFromUser))
+                {
+                    Console.WriteLine("You have to enter a valid option !");
+                    inputFromUser = Console.ReadLine();
+                }
+                option = Convert.ToInt32(inputFromUser);
                 NavHelper();
             }
             while (option > 0);
