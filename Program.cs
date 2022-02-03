@@ -37,6 +37,7 @@ namespace Exercitii
                         credit = AddCredit(credit, Convert.ToDouble(Console.ReadLine()));
                         break;
                 }
+
                 Console.Write($"Please select your option: ");
                 string inputFromUser = Console.ReadLine();
                 while(String.IsNullOrEmpty(inputFromUser))
